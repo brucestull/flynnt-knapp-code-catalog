@@ -1,12 +1,13 @@
 # 02 - Run Application Locally
 
-## Resources:
+## Resources
 
-## Process:
+## Process
 
 1. Open terminal in project root:
     * Sample location:
-        ```
+
+        ```console
         PS C:\Users\Bruce\Programming\totally-new-heroku-app-name> Get-Location
 
         Path
@@ -19,7 +20,8 @@
 1. Create `pipenv` virtual environment using provided `Pipfile` configuration:  
     `pipenv install`
     * Sample output:
-        ```
+
+        ```console
         PS C:\Users\Bruce\Programming\totally-new-heroku-app-name> pipenv install
         Creating a virtualenv for this project...
         Pipfile: C:\Users\Bruce\Programming\totally-new-heroku-app-name\Pipfile
@@ -41,14 +43,16 @@
 
 1. Note line with `Virtualenv location:`. This line will have the virtual environment location. This information may be useful later.
     * Sample location:
-        ```
+
+        ```console
         C:\Users\Bruce\.virtualenvs\totally-new-heroku-app-name-D8cdteJM
         ```
 
 1. Activate virtual environment:  
     `pipenv shell`
     * Sample output:
-        ```
+
+        ```console
         PS C:\Users\Bruce\Programming\totally-new-heroku-app-name> pipenv shell
         Launching subshell in virtual environment...
         PowerShell 7.2.4
@@ -61,7 +65,8 @@
 1. Verify current Python interpreter is the one in the virtual environment:  
     `Get-Command python | fl *`
     * Sample output:
-        ```
+
+        ```console
         PS C:\Users\Bruce\Programming\totally-new-heroku-app-name> Get-Command python | fl *
 
         HelpUri            :
@@ -101,14 +106,16 @@
 
 1. Note that `Path` is (should be) for the Python interpreter which is in the above virtual environment. The Python interpreter is in the `Scripts` directory of the virtual environment we created above.
     * Sample line from above output:
-        ```
+
+        ```console
         Path               : C:\Users\Bruce\.virtualenvs\totally-new-heroku-app-name-D8cdteJM\Scripts\python.exe
         ```
 
 1. Perform `accounts` application migration. It is important to do the `accounts` app migration before the rest of the app migrations since we are using a `CustomUser` model which [inherits](https://www.w3schools.com/python/python_inheritance.asp) from `AbstractUser`:  
     `python manage.py migrate accounts`
     * Sample output:
-        ```
+
+        ```console
         PS C:\Users\Bruce\Programming\totally-new-heroku-app-name> python manage.py migrate accounts
         Operations to perform:
         Apply all migrations: accounts
@@ -134,7 +141,8 @@
 1. Perform project migration:  
     `python manage.py migrate`
     * Sample output:
-        ```
+
+        ```console
         PS C:\Users\Bruce\Programming\totally-new-heroku-app-name> python manage.py migrate
         Operations to perform:
         Apply all migrations: admin, auth, contenttypes, sessions, accounts
@@ -150,7 +158,8 @@
     `python manage.py createsuperuser`
     * Follow `createsuperuser` dialog.
         * Sample output:
-            ```
+
+            ```console
             PS C:\Users\Bruce\Programming\totally-new-heroku-app-name> python manage.py createsuperuser
             Username: admin
             Email address: admin@email.app
@@ -165,32 +174,33 @@
 1. Test application on local server:  
     `python manage.py runserver`
     * Sample terminal output on server start:
-        ```
+
+        ```console
         PS C:\Users\Bruce\Programming\totally-new-heroku-app-name> python manage.py runserver
         Watching for file changes with StatReloader
         Performing system checks...
 
         System check identified no issues (0 silenced).
         August 19, 2022 - 10:03:05
-        Django version 4.0, using settings 'my_current_project.settings.development'
+        Django version 4.0, using settings 'config.settings.development'
         Starting development server at http://127.0.0.1:8000/
         Quit the server with CTRL-BREAK.
         ```
 
 1. Open browser to server address:
-    * http://localhost:8000/
+    * <http://localhost:8000/>
 
 1. Login using superuser credentials created above.
 
 1. Investigate Django Admin interface:
-    * http://localhost:8000/admin/
+    * <http://localhost:8000/admin/>
 
 1. Investigate the Django Admin Documentation features:
-    * http://localhost:8000/admin/doc/
-    * http://localhost:8000/admin/doc/models/accounts.customuser/
+    * <http://localhost:8000/admin/doc/>
+    * <http://localhost:8000/admin/doc/models/accounts.customuser/>
 
 1. Proceed to [Create Heroku Application Server Instance](03_create_heroku_application_server_instance.md).
 
+## Repository Links
 
-## Repository Links:
 [README.md](../README.md)

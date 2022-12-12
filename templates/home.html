@@ -1,14 +1,19 @@
 {% extends "base.html" %}
 
-{% block title %}DjangoCustomUserStarter - Home{% endblock %}
+{% block title %}Flynnt Knapp Code Catalog - Home{% endblock %}
 
 {% block content %}
     {% if user.is_authenticated %}
         Greetings, {{ user.username | capfirst }}:
-        <p><a href="{% url 'logout' %}">Log Out</a></p>
-        <p><a href="{% url 'edit_profile' user.id %}">Edit Profile</a></p>
-        <p><a href="{% url 'password_change' %}">Password Change</a></p>
-        <p><a href="{% url 'password_reset' %}">Password Reset</a></p>
+        <br>
+        <a href="{% url 'logout' %}">Log Out</a>
+        <br>
+        <a href="{% url 'edit_profile' user.id %}">Edit Profile</a>
+        <br>
+        <a href="{% url 'password_change' %}">Password Change</a>
+        <br>
+        <a href="{% url 'password_reset' %}">Password Reset</a>
+        <br>
         {% if user.is_staff %}
             <h2>Staff Links:</h2>
             <a

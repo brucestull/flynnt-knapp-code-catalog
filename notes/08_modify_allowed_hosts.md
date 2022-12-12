@@ -1,16 +1,18 @@
 # 08 - Modify ALLOWED_HOSTS
 
-## Resources:
+## Resources
+
 * [Deploy a Django App to Heroku - Video - Pretty Printed](https://www.youtube.com/watch?v=GMbVzl_aLxM)
 
-## Process:
+## Process
 
-1. Edit `ALLOWED_HOSTS` property in `production.py` ([production.py](../my_current_project/settings/production.py)) to include the heroku application root domain:  
+1. Edit `ALLOWED_HOSTS` property in `production.py` ([production.py](../config/settings/production.py)) to include the heroku application root domain:  
     `ALLOWED_HOSTS = ['totally-new-heroku-app-name.herokuapp.com']`
 
 1. Git `add`, `commit`, and `push` to `origin` (the repository created earlier):  
     * Sample output:
-        ```
+
+        ```console
         PS C:\Users\Bruce\Programming\my-local-repository> git status
         On branch main
         Your branch is up to date with 'origin/main'.
@@ -18,7 +20,7 @@
         Changes not staged for commit:
         (use "git add <file>..." to update what will be committed)
         (use "git restore <file>..." to discard changes in working directory)
-                modified:   my_current_project/settings/production.py
+                modified:   config/settings/production.py
 
         no changes added to commit (use "git add" and/or "git commit -a")
         PS C:\Users\Bruce\Programming\my-local-repository> git add .
@@ -39,5 +41,6 @@
 
 1. Proceed to [Push to Heroku and Create Superuser](09_push_to_heroku_and_createsuperuser.md)
 
-## Repository Links:
+## Repository Links
+
 [README.md](../README.md)
