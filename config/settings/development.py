@@ -8,6 +8,8 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
