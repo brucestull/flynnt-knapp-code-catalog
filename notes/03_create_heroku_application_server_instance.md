@@ -67,16 +67,16 @@
         ```console
         PS C:\Users\Bruce\Programming\totally-new-heroku-app-name> heroku create totally-new-heroku-app-name
         Creating ⬢ totally-new-heroku-app-name... done
-        https://totally-new-heroku-app-name.herokuapp.com/ | https://git.heroku.com/totally-new-heroku-app-name.git
+        https://flynnt-knapp-code-catalog.herokuapp.com/ | https://git.heroku.com/flynnt-knapp-code-catalog.git
         PS C:\Users\Bruce\Programming\totally-new-heroku-app-name>
         ```
 
 1. Note Heroku application and Heroku git addresses:
     * Sample addresses:
         * Heroku application deployment address:
-            * <https://totally-new-heroku-app-name.herokuapp.com/>
+            * <https://flynnt-knapp-code-catalog.herokuapp.com/>
         * Heroku application git repository address:
-            * <https://git.heroku.com/totally-new-heroku-app-name.git>
+            * <https://git.heroku.com/flynnt-knapp-code-catalog.git>
 
 1. Verify there are now two git remotes: `heroku` and `origin` (which we created earlier):  
     `git remote -v`
@@ -84,16 +84,27 @@
 
         ```console
         PS C:\Users\Bruce\Programming\totally-new-heroku-app-name> git remote -v
-        heroku  https://git.heroku.com/totally-new-heroku-app-name.git (fetch)
-        heroku  https://git.heroku.com/totally-new-heroku-app-name.git (push)
-        origin  https://github.com/brucestull/totally-new-heroku-app-name.git (fetch)
-        origin  https://github.com/brucestull/totally-new-heroku-app-name.git (push)
+        heroku  https://git.heroku.com/flynnt-knapp-code-catalog.git (fetch)
+        heroku  https://git.heroku.com/flynnt-knapp-code-catalog.git (push)
+        origin  https://github.com/brucestull/flynnt-knapp-code-catalog.git (fetch)
+        origin  https://github.com/brucestull/flynnt-knapp-code-catalog.git (push)
         PS C:\Users\Bruce\Programming\totally-new-heroku-app-name>
         ```
 
     * NOTE: We will be pushing changes to the two separate remotes using different commands. There are ways to change workflow but that is beyond scope of this exercise. These commands don't need to be run right now but will be used in future.
         * `git push` (for `origin`)
         * `git push heroku main` (for `heroku`)
+
+1. **ERROR**
+
+  ```console
+  django.core.exceptions.ImproperlyConfigured: You're using the staticfiles app without having set the STATIC_ROOT setting to a filesystem path.
+  ```
+
+1. Replace code in [](../config/production.py) with the following (note the `STATIC_ROOT` setting):
+
+    * ~~`STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')`~~
+    * `STATIC_ROOT = BASE_DIR / 'staticfiles'`
 
 1. Proceed to [Provision Database Server Instance](04_provision_database_server_instance.md)
 
