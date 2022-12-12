@@ -1,24 +1,6 @@
-# Django Starter with CustomUser, Django Documentation Generator, DEV-PROD settings, pipenv, and Heroku Procfile
-
-* NOTE: Author is using PowerShell for this guide.
+# Flynnt Knapp Code Catalog
 
 ## Features
-
-* Custom user model.
-* Django admin documentation generator.
-* Separate DEV and PROD settings.
-* Pipfile included.
-* Heroku Procfile included.
-* [Project Directory Structure](notes/00_directory_structure.md)
-
-## Assumptions
-
-* User has functioning [Python](https://www.python.org/downloads/) 3.10 installation.
-* User has functioning [pipenv](https://pypi.org/project/pipenv/) installation.
-* User has functioning [git](https://git-scm.com/downloads) installation.
-* User is familiar with how to use terminal commands.
-* User has [Heroku](https://www.heroku.com/) account.
-* User has [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#install-the-heroku-cli) installed.
 
 ## **WARNING:**
 
@@ -44,6 +26,3 @@
 * DEV and PROD settings: [Configuring Django Settings for Production - thinkster.io](https://thinkster.io/tutorials/configuring-django-settings-for-production)
 
 ## Links to this project's pages
-
-* DjangoCustomUserStarter [Project Board](https://github.com/brucestull/DjangoCustomUserStarter/projects/1)
-* DjangoCustomUserStarter [Repository](https://github.com/brucestull/DjangoCustomUserStarter)
