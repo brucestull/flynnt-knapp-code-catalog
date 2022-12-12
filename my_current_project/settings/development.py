@@ -22,12 +22,10 @@ DATABASES = {
 # Create your own `SECRET_KEY` here for use in Development.
 # This one is provided here for user to get the DjangoCustomUserStarter up and running quickly.
     # Ideally, you would not run with `SECRET_KEY` exposed in development either.
-        # You can set a `SECRET_KEY` on you development computer system.
+        # You can set a `SECRET_KEY` on your development computer system.
         # Create a specific `SECRET_KEY` for development and use it in development only.
         # Create a specific `SECRET_KEY` for production and use it in production only.
-SECRET_KEY = "3)hq&x!awji5*(iw3ovzji^92as-nw57(m@7h#x^-c2wzu%qam"
-# **OR**
-# SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # To create a new `SECRET_KEY`:
 """

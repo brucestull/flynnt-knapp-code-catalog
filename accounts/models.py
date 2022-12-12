@@ -11,4 +11,4 @@ class CustomUser(AbstractUser):
         """
         String representation of CustomUser.
         """
-        return self.username
+        return str(self.id) + ' : ' + self.username
