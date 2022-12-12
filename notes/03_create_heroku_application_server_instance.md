@@ -101,10 +101,18 @@
   django.core.exceptions.ImproperlyConfigured: You're using the staticfiles app without having set the STATIC_ROOT setting to a filesystem path.
   ```
 
-1. Replace code in [](../config/production.py) with the following (note the `STATIC_ROOT` setting):
+1. **TEMPORARY FIX**
+    * [`config/settings/production.py`](../config/settings/production.py):
 
-    * ~~`STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')`~~
-    * `STATIC_ROOT = BASE_DIR / 'staticfiles'`
+        ```python
+        STATIC_ROOT = BASE_DIR / 'staticfiles'
+        ```
+
+    * [`config/settings/development.py`](../config/settings/development.py):
+
+        ```python
+        STATIC_ROOT = BASE_DIR / 'staticfiles'
+        ```
 
 1. Proceed to [Provision Database Server Instance](04_provision_database_server_instance.md)
 
