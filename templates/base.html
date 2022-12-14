@@ -23,6 +23,50 @@
                 Home
             </a>
             <br>
+            <br>
+            <a
+                href="/api/v1/"
+                target="_blank"
+                >
+                Django Browsable API Repository
+            </a>
+            <br>
+            <a
+                href={% url 'snippettt-list' %}
+                target="_blank"
+                >
+                Snippettts
+            </a>
+            <br>
+            <a
+                href={% url 'taggg-list' %}
+                target="_blank"
+                >
+                Tagggs
+            </a>
+            <br>
+            <a
+                href={% url 'userrr-list' %}
+                target="_blank"
+                >
+                Userrrs
+            </a>
+            <br>
+            <a
+                href={% url 'userrr-detail' 1 %}
+                target="_blank"
+                >
+                Userrr 1
+            </a>
+            <br>
+            <a
+                href={% url 'currentuserrr-list' %}
+                target="_blank"
+                >
+                Current Userrr
+            </a>
+            <br>
+            <br>
             {% block content %}
             {% endblock %}
         </main>

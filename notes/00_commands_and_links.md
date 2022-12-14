@@ -23,7 +23,10 @@
 * `tree /f /a`
 * `python manage.py runserver`
 * `python manage.py makemigrations`
+* `python manage.py makemigrations accounts`
+* `python manage.py makemigrations code_catalog`
 * `python manage.py migrate accounts`
+* `python manage.py migrate accounts code_catalog`
 * `python manage.py migrate users`
 * `python manage.py migrate`
 * `python manage.py createsuperuser`
@@ -35,6 +38,7 @@
 * Server Root:
   * <http://localhost:8000/>
 * Application Routes:
+  * <http://localhost:8000/api/v1/>
 
 * Django Admin:
   * <http://localhost:8000/admin/>

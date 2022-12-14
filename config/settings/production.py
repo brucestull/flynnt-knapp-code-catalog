@@ -12,9 +12,6 @@ ALLOWED_HOSTS = ['flynnt-knapp-code-catalog.herokuapp.com']
 MIDDLEWARE = MIDDLEWARE + ['whitenoise.middleware.WhiteNoiseMiddleware']
 
 
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
