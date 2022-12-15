@@ -6,6 +6,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+        <style>
+            code {
+                font-size: 1.5em;
+            }
+        </style>
         <title>{% block title %}Flynnt Knapp Code Catalog - Base{% endblock %}</title>
     </head>
     <body>
@@ -18,9 +23,22 @@
             </a>
             <br>
             <a
+                href="https://flynnt-knapp-code-catalog.herokuapp.com/"
+                target="_blank"
+                >
+                Flynnt Knapp Code Catalog - Heroku
+            </a>
+            <br>
+            <a
                 href="/"
                 >
-                Home
+                Home - <code>"/"</code>
+            </a>
+            <br>
+            <a
+                href={% url 'home' %}
+                >
+                Home - <code>&#123% url 'home' %&#125</code>
             </a>
             <br>
             <br>
@@ -28,42 +46,51 @@
                 href="/api/v1/"
                 target="_blank"
                 >
-                Django Browsable API Repository
+                Django Browsable API Repository - <code>"/api/v1/"</code>
             </a>
             <br>
+            <a
+                href={% url 'api-root' %}
+                target="_blank"
+                >
+                Django Browsable API Repository - <code>&#123% url 'api-root' %&#125</code>
+            </a>
+            <br>
+            {% comment %} { ==> &#123 {% endcomment %}
+            {% comment %} } ==> &#125 {% endcomment %}
             <a
                 href={% url 'snippettt-list' %}
                 target="_blank"
                 >
-                Snippettts
+                Snippetts - <code>&#123% url 'snippettt-list' %&#125</code>
             </a>
             <br>
             <a
                 href={% url 'taggg-list' %}
                 target="_blank"
                 >
-                Tagggs
+                Tagggs - <code>&#123% url 'taggg-list' %&#125</code>
             </a>
             <br>
             <a
                 href={% url 'userrr-list' %}
                 target="_blank"
                 >
-                Userrrs
+                Userrrs - <code>&#123% url 'userrr-list' %&#125</code>
             </a>
             <br>
             <a
                 href={% url 'userrr-detail' 1 %}
                 target="_blank"
                 >
-                Userrr 1
+                Userrr 1 - <code>&#123% url 'userrr-detail' 1' %&#125</code>
             </a>
             <br>
             <a
                 href={% url 'currentuserrr-list' %}
                 target="_blank"
                 >
-                Current Userrr
+                Current Userrr - <code>&#123% url 'currentuserrr-list' %&#125</code>
             </a>
             <br>
             <br>

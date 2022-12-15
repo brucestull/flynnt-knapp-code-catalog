@@ -6,13 +6,13 @@
     {% if user.is_authenticated %}
         Greetings, {{ user.username | capfirst }}:
         <br>
-        <a href="{% url 'logout' %}">Log Out</a>
+        <a href="{% url 'logout' %}">Log Out - <code>&#123% url 'logout' %&#125</code></a>
         <br>
-        <a href="{% url 'edit_profile' user.id %}">Edit Profile</a>
+        <a href="{% url 'edit_profile' user.id %}">Edit Profile - <code>&#123% url 'edit_profile' user.id %&#125</code></a>
         <br>
-        <a href="{% url 'password_change' %}">Password Change</a>
+        <a href="{% url 'password_change' %}">Password Change - <code>&#123% url 'password_change' %&#125</code></a>
         <br>
-        <a href="{% url 'password_reset' %}">Password Reset</a>
+        <a href="{% url 'password_reset' %}">Password Reset - <code>&#123% url 'password_reset' %&#125</code></a>
         <br>
         {% if user.is_staff %}
             <h2>Staff Links:</h2>
@@ -21,11 +21,20 @@
                 target="_blank"
                 >
                 Django Admin Interface
-            </a><br>
+            </a>
+            <br>
+            <a
+                href={% url 'admin:index' %}
+                target="_blank"
+                >
+                Django Admin Interface - <code>&#123% url 'admin:index' %&#125</code>
+            </a>
+            <br>
         {% endif %}
     {% else %}
         <p>You are not logged in</p>
-        <a href="{% url 'login' %}">Log In</a> |
-        <a href="{% url 'signup' %}">Sign Up</a>
+        <a href="{% url 'login' %}">Log In - <code>&#123% url 'login' %&#125</code></a>
+        <br>
+        <a href="{% url 'signup' %}">Sign Up - <code>&#123% url 'signup' %&#125</code></a>
     {% endif %}
 {% endblock %}
